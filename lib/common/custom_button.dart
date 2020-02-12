@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
       height: 60,
       child: RaisedButton(
         elevation: 0,
-        onPressed: () => action(),
+        onPressed: action,
         color: inverted ? Colors.white : Colors.red[400],
         shape: new RoundedRectangleBorder(
           borderRadius: new BorderRadius.circular(60),
