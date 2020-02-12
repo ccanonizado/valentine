@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
           case '/':
-            return NoAnimationMaterialPageRoute(
+            return MaterialPageRoute(
               builder: (_) => Home(),
             );
           case '/no':
@@ -23,7 +23,7 @@ class App extends StatelessWidget {
               builder: (_) => No(),
             );
           case '/yes':
-            return NoAnimationMaterialPageRoute(
+            return MaterialPageRoute(
               builder: (_) => Yes(),
             );
           default:
@@ -31,30 +31,7 @@ class App extends StatelessWidget {
         }
       },
       title: 'Hi Beili',
+      theme: ThemeData(fontFamily: "OpenSans"),
     );
-  }
-}
-
-class NoAnimationMaterialPageRoute<T> extends MaterialPageRoute<T> {
-  NoAnimationMaterialPageRoute({
-    @required WidgetBuilder builder,
-    RouteSettings settings,
-    bool maintainState = true,
-    bool fullscreenDialog = false,
-  }) : super(
-          builder: builder,
-          maintainState: maintainState,
-          settings: settings,
-          fullscreenDialog: fullscreenDialog,
-        );
-
-  @override
-  Widget buildTransitions(
-    BuildContext context,
-    Animation<double> animation,
-    Animation<double> secondaryAnimation,
-    Widget child,
-  ) {
-    return child;
   }
 }
