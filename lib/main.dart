@@ -30,7 +30,7 @@ class App extends StatelessWidget {
             return null;
         }
       },
-      title: 'Hi Beili',
+      title: 'Valentine',
       theme: ThemeData(fontFamily: "OpenSans"),
     );
   }
