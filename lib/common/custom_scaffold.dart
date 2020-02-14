@@ -22,6 +22,7 @@ class CustomScaffold extends StatelessWidget {
   }
 }
 
+// This removes the scroll grow
 class CustomScrollBehavior extends ScrollBehavior {
   @override
   Widget buildViewportChrome(

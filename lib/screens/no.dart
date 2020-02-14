@@ -6,6 +6,9 @@ import '../common/text_header.dart';
 import '../common/text_content.dart';
 import '../common/gif.dart';
 
+import '../constants/assets.dart';
+import '../constants/text.dart';
+
 class No extends StatefulWidget {
   No({Key key}) : super(key: key);
 
@@ -29,15 +32,12 @@ class _NoState extends State<No> {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    Gif(url: 'assets/gifs/sad.gif'),
+                    Gif(url: sad_gif),
                     Padding(
                       padding: const EdgeInsets.only(top: 10, bottom: 30),
-                      child: TextHeader(text: 'Whyyy????'),
+                      child: TextHeader(text: no_header),
                     ),
-                    TextContent(
-                      text:
-                          "U dun like me??\nI dun accept NO!\n*insert more fragile masculinity*\nGRRRRRRRR\n\n.....\n\nJUST KIDDING!\nIt's oke, I know that -\nNO means NO\nI still luv u",
-                    ),
+                    TextContent(text: no_content),
                   ],
                 ),
               ),
@@ -51,7 +51,7 @@ class _NoState extends State<No> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   CustomButton(
-                    text: 'back',
+                    text: back_button,
                     inverted: false,
                     action: () => Navigator.pop(context),
                   ),

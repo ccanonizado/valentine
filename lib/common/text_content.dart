@@ -17,7 +17,6 @@ class TextContent extends StatelessWidget {
     return Text(
       text,
       textAlign: TextAlign.center,
-      overflow: TextOverflow.ellipsis,
       style: TextStyle(
         fontSize: size ?? 20,
         color: color ?? Colors.black54,

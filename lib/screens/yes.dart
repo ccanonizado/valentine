@@ -6,6 +6,9 @@ import '../common/text_header.dart';
 import '../common/text_content.dart';
 import '../common/gif.dart';
 
+import '../constants/assets.dart';
+import '../constants/text.dart';
+
 class Yes extends StatefulWidget {
   Yes({Key key}) : super(key: key);
 
@@ -29,15 +32,12 @@ class _YesState extends State<Yes> {
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    Gif(url: 'assets/gifs/kiss.gif'),
+                    Gif(url: kiss_gif),
                     Padding(
                       padding: const EdgeInsets.only(top: 10, bottom: 30),
-                      child: TextHeader(text: 'Yaaaay!!!'),
+                      child: TextHeader(text: yes_header),
                     ),
-                    TextContent(
-                      text:
-                          "See u :D\nWhat u wanna do?\nMovie? Samgyup? Idk\nYou decide!\n\nAnyway am just here\nMaybe we can sleep\nand eat... and sleep...\n\nMwa mwa!\nI love you :)",
-                    ),
+                    TextContent(text: yes_content),
                   ],
                 ),
               ),
@@ -51,7 +51,7 @@ class _YesState extends State<Yes> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   CustomButton(
-                    text: 'back',
+                    text: back_button,
                     inverted: false,
                     action: () => Navigator.pop(context),
                   ),
