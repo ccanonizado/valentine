@@ -36,7 +36,7 @@ class App extends StatelessWidget {
   }
 }
 
-// You can use this in place of the MaterialPageRoutes
+// You can use this instead of the MaterialPageRoutes
 class NoAnimationMaterialPageRoute<T> extends MaterialPageRoute<T> {
   NoAnimationMaterialPageRoute({
     @required WidgetBuilder builder,
